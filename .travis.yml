@@ -6,4 +6,4 @@ before_install:
   - docker build -t kevindan22/podman-react -f Dockerfile.dev .
 
 script:
-  - docker run podman-react npm run test -- --coverage
+  - docker run kevindan22/podman-react npm run test -- --coverage
