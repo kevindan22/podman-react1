@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+  - podman
+
+before_install:
+  - podman build -t kevindan22/podman-react -f Dockerfile.dev .
+
+script:
+  - podman run podman-react npm run test -- --coverage
